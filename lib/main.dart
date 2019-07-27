@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
     web
         .authorize(
       audience: 'AUDIENCE FROM DASHBOARD',
-      scope: 'test:test',
+      scope: 'openid email',
     )
         .then((value) {
       print('response: $value');
