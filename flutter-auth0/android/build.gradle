@@ -1,0 +1,39 @@
+group 'io.flutter.plugins.flutterauth0'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+    dependencies{
+        // https://mvnrepository.com/artifact/com.android.support/customtabs
+        compile group: 'com.android.support', name: 'customtabs', version: '28.0.0'
+        compile group: 'com.android.support', name: 'support-core-utils', version: '28.0.0'
+    }
+}
